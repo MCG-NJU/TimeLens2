@@ -7,17 +7,19 @@
 
 Yuhan Zhu<sup>&ast;1,2</sup>, Changlian Ma<sup>&ast;1,2</sup>,
 Xiangyu Zeng<sup>&ast;1,2</sup>, Xinhao Li<sup>&ast;1</sup>,
-Zhiqiu Zhang<sup>&ast;3,2</sup>, Jun Zhang<sup>1</sup>,
+Zhiqiu Zhang<sup>&ast;3,2</sup>, Yuandong Yang<sup>1</sup>,
+Jun Zhang<sup>1</sup>,
 Ziang Yan<sup>4,2</sup>, Zikang Wang<sup>3,2</sup>,
 Xinyu Chen<sup>1,2</sup>, Haoran Chen<sup>1,2</sup>,
-Shaowei Zhang<sup>3,2</sup>, Limin Wang<sup>1,2,&dagger;</sup>
+Shaowei Zhang<sup>3,2</sup>, Limin Wang<sup>1,2,&#9993;</sup>
 
 <sup>1</sup>Nanjing University &nbsp;
 <sup>2</sup>Shanghai AI Laboratory &nbsp;
 <sup>3</sup>Shanghai Jiao Tong University &nbsp;
 <sup>4</sup>Zhejiang University
 
-<sup>&ast;</sup>Equal contribution. <sup>&dagger;</sup>Corresponding author.
+<sup>&ast;</sup>Equal contribution. <sup>&#9993;</sup>Corresponding author:
+`lmwang@nju.edu.cn`.
 
 ## 🔍 What is TimeLens2?
 

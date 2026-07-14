@@ -1,0 +1,23 @@
+{
+  "timelens2_93k": {
+    "media_root": "${TIMELENS2_93K_ROOT}/videos",
+    "anno_path": "${TIMELENS2_93K_ROOT}/TimeLens2-93K_xtuner.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  },
+  "timelens_100k": {
+    "media_root": "${TIMELENS_100K_ROOT}/videos",
+    "anno_path": "${TIMELENS_100K_ROOT}/TimeLens-100K_xtuner.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  },
+  "ego4d_nlq": {
+    "media_root": "${EGO4D_VIDEO_ROOT}",
+    "anno_path": "${EGO4D_NLQ_ROOT}/ego4d_nlq_train_v2_xtuner.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  }
+}

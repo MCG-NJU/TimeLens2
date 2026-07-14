@@ -215,3 +215,11 @@ SenseNova*
 
 temp
 result*
+
+# Files required by the flattened TimeLens2 release repository.
+!assets/apple.jpg
+!vlmeval/dataset/utils/Ocrbench_v2/spotting_eval/script.py
+!vlmeval/utils/result_transfer.py
+!vlmeval/vlm/video_llm/configs/llama_vid/processor/clip-patch14-224/config.json
+!vlmeval/vlm/video_llm/configs/llama_vid/processor/clip-patch14-224/preprocessor_config.json
+!vlmeval/vlm/video_llm/configs/videochat2_hd.json

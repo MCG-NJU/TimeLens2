@@ -1,0 +1,8 @@
+{
+  "timelens2_93k": {
+    "anno_path": "${TIMELENS2_93K_ROOT}/TimeLens2-93K_grpo.jsonl",
+    "mp4_root": "${TIMELENS2_93K_ROOT}/videos",
+    "reward": "tiou",
+    "prompt_template": "Query: '{query}'\nTask: Return the matching time intervals in seconds.\nReturn the result strictly as a JSON array of [start, end] pairs, where each value is a timestamp in seconds. Example: [[0.0, 3.5]] for one segment, or [[0.0, 3.5], [10.0, 12.0]] for multiple."
+  }
+}

@@ -6,7 +6,7 @@ __pycache__/
 .cache/
 .dist_addr/
 .deepspeed_hostfiles/
-data/
+/data/
 outputs/
 output/
 work_dir/
