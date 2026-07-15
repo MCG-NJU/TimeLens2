@@ -1,21 +1,49 @@
 {
-  "timelens2_93k": {
-    "media_root": "${TIMELENS2_93K_ROOT}/videos",
-    "anno_path": "${TIMELENS2_93K_ROOT}/TimeLens2-93K_xtuner.jsonl",
+  "timelens2_93k_short_14891": {
+    "media_root": "data/timelens2-93k/videos",
+    "anno_path": "training_data_annotations/timelens2-93k/timelens2-93k_short.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
-  "timelens_100k": {
-    "media_root": "${TIMELENS_100K_ROOT}/videos",
-    "anno_path": "${TIMELENS_100K_ROOT}/TimeLens-100K_xtuner.jsonl",
+  "timelens2_93k_long_le6000s_8902": {
+    "media_root": "data/timelens2-93k/videos_2fps",
+    "anno_path": "training_data_annotations/timelens2-93k/timelens2-93k_long.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
-  "ego4d_nlq": {
-    "media_root": "${EGO4D_VIDEO_ROOT}",
-    "anno_path": "${EGO4D_NLQ_ROOT}/ego4d_nlq_train_v2_xtuner.jsonl",
+  "timelens_100k_0_to_60_5300": {
+    "media_root": "data/timelens-100k/videos",
+    "anno_path": "training_data_annotations/timelens-100k/timelens-100k_0-to-60_5300_format2.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  },
+  "timelens_100k_60_to_120_6157": {
+    "media_root": "data/timelens-100k/videos",
+    "anno_path": "training_data_annotations/timelens-100k/timelens-100k_60-to-120_6157_format2.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  },
+  "timelens_100k_120_to_180_6840": {
+    "media_root": "data/timelens-100k/videos",
+    "anno_path": "training_data_annotations/timelens-100k/timelens-100k_120-to-180_6840_format2.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  },
+  "timelens_100k_over180_1137": {
+    "media_root": "data/timelens-100k/videos_frames",
+    "anno_path": "training_data_annotations/timelens-100k/timelens-100k_over180_1137_format2.jsonl",
+    "sample_ratio": 1.0,
+    "fps": 2,
+    "video_max_frames": 2048
+  },
+  "ego4d_nlq_1270": {
+    "media_root": "data/ego4d/videos",
+    "anno_path": "training_data_annotations/ego4d/ego4d_nlq_train_v2_xtunerformat.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
