@@ -34,107 +34,28 @@ tamperbench_dataset = {
 }
 
 videomme_dataset = {
-    'Video-MME_2fps_limit_768': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768),
-    'Video-MME_short_2fps_limit_768': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='short'),
-    'Video-MME_medium_2fps_limit_768': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='medium'),
-    'Video-MME_long_2fps_limit_768': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='long'),
-    'Video-MME_2fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=512),
-    'Video-MME_short_2fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=512, duration_filter='short'),
-    'Video-MME_medium_2fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=512, duration_filter='medium'),
-    'Video-MME_long_2fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=512, duration_filter='long'),
-    'Video-MME_4fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=4.0, frames_limit=512),
-    'Video-MME_short_1fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=1.0, frames_limit=512, duration_filter='short'),
-    'Video-MME_short_4fps_limit_512': partial(VideoMME, dataset='Video-MME', fps=4.0, frames_limit=512, duration_filter='short'),
-    'Video-MME_2fps': partial(VideoMME, dataset='Video-MME', fps=2.0),
-    'Video-MME_long_2fps_limit_1024': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='long'),
-    'Video-MME_long_2fps_limit_1536': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1536, duration_filter='long'),
-    'Video-MME_short_2fps': partial(VideoMME, dataset='Video-MME', fps=2.0, duration_filter='short'),
-    'Video-MME_medium_2fps': partial(VideoMME, dataset='Video-MME', fps=2.0, duration_filter='medium'),
-    'Video-MME_long_2fps': partial(VideoMME, dataset='Video-MME', fps=2.0, duration_filter='long'),
-    'Video-MME_0.5fps_subs': partial(VideoMME, dataset='Video-MME', fps=0.5, use_subtitle=True),
-    'Video-MME_long_2fps_limit_768_448px_48kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=96000*4*14*14),
-    'Video-MME_long_2fps_limit_1024_448px_48kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=96000*4*14*14),
-    'Video-MME_long_2fps_limit_1536_448px_48kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1536, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=96000*4*14*14),
-    'Video-MME_long_2fps_limit_768_448px_96kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=96000*2*4*14*14),
-    'Video-MME_short_2fps_limit_768_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='short', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_medium_2fps_limit_768_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='medium', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_long_2fps_limit_768_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_short_2fps_limit_1024_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='short', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_medium_2fps_limit_1024_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='medium', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_long_2fps_limit_1024_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_short_2fps_limit_2048_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=2048, duration_filter='short', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_medium_2fps_limit_2048_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=2048, duration_filter='medium', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_long_2fps_limit_2048_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=2048, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'Video-MME_long_2fps_limit_1024_448px_96kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=96000*2*4*14*14),
-    'Video-MME_long_2fps_limit_1024_448px_128kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=128000*2*4*14*14),
-    'Video-MME_long_2fps_limit_2048_448px_64kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=2048, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=64000*2*4*14*14),
-    'Video-MME_short_1fps_limit_16': partial(VideoMME, dataset='Video-MME', fps=1.0, frames_limit=16, duration_filter='short'),
-    'Video-MME_medium_1fps_limit_16': partial(VideoMME, dataset='Video-MME', fps=1.0, frames_limit=16, duration_filter='medium'),
-    'Video-MME_long_1fps_limit_16': partial(VideoMME, dataset='Video-MME', fps=1.0, frames_limit=16, duration_filter='long'),
-    'Video-MME_long_2fps_limit_768_448px_100kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=768, duration_filter='long', min_pixels=28*28, max_pixels=448*448, total_pixels=100000*2*4*14*14),
+    'Video-MME_2fps_limit_1024_448px_80kctx': partial(VideoMME, dataset='Video-MME', fps=2.0, frames_limit=1024, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 videommev2_dataset = {
-    'Video-MME-v2_64frame': partial(VideoMMEv2, dataset='Video-MME-v2', nframe=64),
-    'Video-MME-v2_1fps_limit_512': partial(VideoMMEv2, dataset='Video-MME-v2', fps=1.0, frames_limit=512),
-    'Video-MME-v2_64frame_resize': partial(VideoMMEv2, dataset='Video-MME-v2', nframe=64, resize_target_area=448 * 448),
-    'Video-MME-v2_1fps_limit_512_resize': partial(VideoMMEv2, dataset='Video-MME-v2', fps=1.0, frames_limit=512, resize_target_area=448 * 448),
-    'Video-MME-v2_2fps_limit_512_resize': partial(VideoMMEv2, dataset='Video-MME-v2', fps=2.0, frames_limit=512, resize_target_area=448 * 448),
     'Video-MME-v2_1fps_limit_512_448px_80kctx': partial(VideoMMEv2, dataset='Video-MME-v2', fps=1.0, frames_limit=512, resize_target_area=448 * 448, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 videommmu_dataset = {
-    'VideoMMMU_8frame': partial(VideoMMMU, dataset='VideoMMMU', nframe=8),
-    'VideoMMMU_64frame': partial(VideoMMMU, dataset='VideoMMMU', nframe=64),
-    'VideoMMMU_2fps_limit_768': partial(VideoMMMU, dataset='VideoMMMU', fps=2.0, frames_limit=768),
-    'VideoMMMU_2fps_limit_512': partial(VideoMMMU, dataset='VideoMMMU', fps=2.0, frames_limit=512),
-    'VideoMMMU_2fps': partial(VideoMMMU, dataset='VideoMMMU', fps=2.0),
-    'VideoMMMU_1fps': partial(VideoMMMU, dataset='VideoMMMU', fps=1.0),
-    'VideoMMMU_0.5fps': partial(VideoMMMU, dataset='VideoMMMU', fps=0.5),
-    'VideoMMMU_1fps_limit_32': partial(VideoMMMU, dataset='VideoMMMU', fps=1.0, frames_limit=32),
     'VideoMMMU_2fps_limit_512_768px_80kctx': partial(VideoMMMU, dataset='VideoMMMU', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=768*768, total_pixels=80000*2*4*14*14),
-    'VideoMMMU_2fps_limit_2048_768px_80kctx': partial(VideoMMMU, dataset='VideoMMMU', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=768*768, total_pixels=80000*2*4*14*14),
 }
 
 longvideobench_dataset = {
-    'LongVideoBench_8frame': partial(LongVideoBench, dataset='LongVideoBench', nframe=8),
-    'LongVideoBench_8frame_subs': partial(LongVideoBench, dataset='LongVideoBench', nframe=8, use_subtitle=True),
-    'LongVideoBench_64frame': partial(LongVideoBench, dataset='LongVideoBench', nframe=64),
-    'LongVideoBench_2fps_limit_768': partial(LongVideoBench, dataset='LongVideoBench', fps=2.0, frames_limit=768),
-    'LongVideoBench_2fps_limit_512': partial(LongVideoBench, dataset='LongVideoBench', fps=2.0, frames_limit=512),
-    'LongVideoBench_2fps': partial(LongVideoBench, dataset='LongVideoBench', fps=2.0),
-    'LongVideoBench_2fps_limit_768_448px_48kctx': partial(LongVideoBench, dataset='LongVideoBench', fps=2.0, frames_limit=768, min_pixels=28*28, max_pixels=448*448, total_pixels=48000*2*4*14*14),
     'LongVideoBench_2fps_limit_2048_448px_64kctx': partial(LongVideoBench, dataset='LongVideoBench', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=64000*2*4*14*14),
     'LongVideoBench_2fps_group3600': partial(LongVideoBench, dataset='LongVideoBench', fps=2.0, group=3600),
-    'LongVideoBench_1fps': partial(LongVideoBench, dataset='LongVideoBench', fps=1.0),
-    'LongVideoBench_0.5fps': partial(LongVideoBench, dataset='LongVideoBench', fps=0.5),
     'LongVideoBench_0.5fps_subs': partial(LongVideoBench, dataset='LongVideoBench', fps=0.5, use_subtitle=True),
-    'LongVideoBench_1fps_limit_64': partial(LongVideoBench, dataset='LongVideoBench', fps=1.0, frames_limit=64),
 }
 
 videoevalpro_dataset = {
     'VideoEval-Pro_OpenEnded_2fps_limit_2048_448px_80kctx': partial(VideoEvalPro, dataset='VideoEval-Pro', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'VideoEval-Pro_MCQ_2fps_limit_2048_448px_80kctx': partial(VideoEvalProMCQ, dataset='VideoEval-Pro', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'VideoEval-Pro_OpenEnded_2fps_limit_2048_448px_64kctx': partial(VideoEvalPro, dataset='VideoEval-Pro', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=64000*2*4*14*14),
-    'VideoEval-Pro_MCQ_2fps_limit_2048_448px_64kctx': partial(VideoEvalProMCQ, dataset='VideoEval-Pro', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=64000*2*4*14*14),
-    'VideoEval-Pro_OpenEnded_2fps_limit_512_448px_32kctx': partial(VideoEvalPro, dataset='VideoEval-Pro', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=448*448, total_pixels=32000*2*4*14*14),
-    'VideoEval-Pro_MCQ_2fps_limit_512_448px_32kctx': partial(VideoEvalProMCQ, dataset='VideoEval-Pro', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=448*448, total_pixels=32000*2*4*14*14),
-    'VideoEval-Pro_OpenEnded_64frame': partial(VideoEvalPro, dataset='VideoEval-Pro', nframe=64),
-    'VideoEval-Pro_MCQ_64frame': partial(VideoEvalProMCQ, dataset='VideoEval-Pro', nframe=64),
 }
 
 lvbench_dataset = {
-    'LVBench_8frame': partial(LVBench, dataset='LVBench', nframe=8),
-    'LVBench_64frame': partial(LVBench, dataset='LVBench', nframe=64),
-    'LVBench_2fps_limit_768': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=768),
-    'LVBench_2fps_limit_512': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=512),
-    'LVBench_2fps_limit_1024': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=1024),
-    'LVBench_2fps_limit_1536': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=1536),
-    'LVBench_2fps': partial(LVBench, dataset='LVBench', fps=2.0),
-    'LVBench_1fps': partial(LVBench, dataset='LVBench', fps=1.0),
-    'LVBench_2fps_limit_2048_448px_64kctx': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=64000*2*4*14*14),
-    'LVBench_2fps_limit_2048_448px_100kctx': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=100000*2*4*14*14),
-    'LVBench_1fps_limit_64': partial(LVBench, dataset='LVBench', fps=1.0, frames_limit=64),
     'LVBench_2fps_limit_2048_448px_80kctx': partial(LVBench, dataset='LVBench', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
@@ -145,17 +66,6 @@ mlvu_dataset = {
 }
 
 tempcompass_dataset = {
-    'TempCompass_8frame': partial(TempCompass, dataset='TempCompass', nframe=8),
-    'TempCompass_64frame': partial(TempCompass, dataset='TempCompass', nframe=64),
-    'TempCompass_1fps': partial(TempCompass, dataset='TempCompass', fps=1.0),
-    'TempCompass_8fps': partial(TempCompass, dataset='TempCompass', fps=8.0),
-    'TempCompass_0.5fps': partial(TempCompass, dataset='TempCompass', fps=0.5),
-    'TempCompass_2fps_limit_512': partial(TempCompass, dataset='TempCompass', fps=2.0, frames_limit=512),
-    'TempCompass_2fps_limit_768': partial(TempCompass, dataset='TempCompass', fps=2.0, frames_limit=768),
-    'TempCompass_MCQ_2fps_limit_512': partial(TempCompass_MCQ, dataset='TempCompass_MCQ', fps=2.0, frames_limit=512),
-    'TempCompass_Captioning_2fps_limit_512': partial(TempCompass_Captioning, dataset='TempCompass_Captioning', fps=2.0, frames_limit=512),
-    'TempCompass_YorN_2fps_limit_512': partial(TempCompass_YorN, dataset='TempCompass_YorN', fps=2.0, frames_limit=512),
-    'TempCompass_1fps_limit_32': partial(TempCompass, dataset='TempCompass', fps=1.0, frames_limit=32),
     'TempCompass_8fps_limit_2048_448px_80kctx': partial(TempCompass, dataset='TempCompass', fps=8.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
@@ -287,167 +197,45 @@ vsibench_dataset = {
 }
 
 mmvu_dataset = {
-    'MMVU_8frame': partial(MMVU, dataset='MMVU', nframe=8),
-    'MMVU_64frame': partial(MMVU, dataset='MMVU', nframe=64),
-    'MMVU_2fps_limit_768': partial(MMVU, dataset='MMVU', fps=2.0, frames_limit=768),
-    'MMVU_2fps_limit_512': partial(MMVU, dataset='MMVU', fps=2.0, frames_limit=512),
-    'MMVU_2fps': partial(MMVU, dataset='MMVU', fps=2.0),
-    'MMVU_1fps': partial(MMVU, dataset='MMVU', fps=1.0),
-    'MMVU_0.5fps': partial(MMVU, dataset='MMVU', fps=0.5),
-    'MMVU_1fps_limit_32': partial(MMVU, dataset='MMVU', fps=1.0, frames_limit=32),
-    'MMVU_2fps_limit_512_768px_80kctx': partial(MMVU, dataset='MMVU', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=768*768, total_pixels=80000*2*4*14*14),
     'MMVU_2fps_limit_2048_768px_80kctx': partial(MMVU, dataset='MMVU', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=768*768, total_pixels=80000*2*4*14*14),
 }
 
 tomato_dataset = {
-    'TOMATO_8frame': partial(TOMATO, dataset='TOMATO', nframe=8),
-    'TOMATO_64frame': partial(TOMATO, dataset='TOMATO', nframe=64),
-    'TOMATO_2fps_limit_768': partial(TOMATO, dataset='TOMATO', fps=2.0, frames_limit=768),
-    'TOMATO_1fps_limit_512': partial(TOMATO, dataset='TOMATO', fps=1.0, frames_limit=512),
-    'TOMATO_2fps_limit_512': partial(TOMATO, dataset='TOMATO', fps=2.0, frames_limit=512),
-    'TOMATO_4fps_limit_512': partial(TOMATO, dataset='TOMATO', fps=4.0, frames_limit=512),
-    'TOMATO_8fps': partial(TOMATO, dataset='TOMATO', fps=8.0),
-    'TOMATO_2fps': partial(TOMATO, dataset='TOMATO', fps=2.0),
-    'TOMATO_1fps': partial(TOMATO, dataset='TOMATO', fps=1.0),
-    'TOMATO_0.5fps': partial(TOMATO, dataset='TOMATO', fps=0.5),
-    'TOMATO_1fps_limit_32': partial(TOMATO, dataset='TOMATO', fps=1.0, frames_limit=32),
     'TOMATO_8fps_limit_2048_448px_80kctx': partial(TOMATO, dataset='TOMATO', fps=8.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 minerva_dataset = {
-    'Minerva_8frame': partial(Minerva, dataset='Minerva', nframe=8),
-    'Minerva_16frame': partial(Minerva, dataset='Minerva', nframe=16),
-    'Minerva_1fps': partial(Minerva, dataset='Minerva', fps=1.0),
-    'Minerva_2fps': partial(Minerva, dataset='Minerva', fps=2.0),
-    'Minerva_2fps_limit_512': partial(Minerva, dataset='Minerva', fps=2.0, frames_limit=512),
-    'Minerva_2fps_limit_768': partial(Minerva, dataset='Minerva', fps=2.0, frames_limit=768),
-    'Minerva_1fps_limit_32': partial(Minerva, dataset='Minerva', fps=1.0, frames_limit=32),
-    'Minerva_2fps_limit_512_448px_80kctx': partial(Minerva, dataset='Minerva', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
     'Minerva_2fps_limit_2048_448px_80kctx': partial(Minerva, dataset='Minerva', fps=2.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 timelens_dataset = {
-    'TimeLens_2fps': partial(TimeLens, dataset='TimeLens', fps=2.0),
-    'TimeLens_1fps': partial(TimeLens, dataset='TimeLens', fps=1.0),
-    'TimeLens_Charades_2fps': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'TimeLens_Charades_1fps': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'TimeLens_ActivityNet_2fps': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'TimeLens_ActivityNet_1fps': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'TimeLens_QVHighlights_2fps': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'TimeLens_QVHighlights_1fps': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'TimeLens_Charades_2fps_limit_768': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=2.0, frames_limit=768),
-    'TimeLens_ActivityNet_2fps_limit_768': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=2.0, frames_limit=768),
-    'TimeLens_QVHighlights_2fps_limit_768': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=2.0, frames_limit=768),
-    'TimeLens_Charades_1fps_limit_512': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=1.0, frames_limit=512),
-    'TimeLens_ActivityNet_1fps_limit_512': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=1.0, frames_limit=512),
-    'TimeLens_QVHighlights_1fps_limit_512': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=1.0, frames_limit=512),
-    'TimeLens_Charades_2fps_limit_512': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=2.0, frames_limit=512),
-    'TimeLens_ActivityNet_2fps_limit_512': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=2.0, frames_limit=512),
-    'TimeLens_QVHighlights_2fps_limit_512': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=2.0, frames_limit=512),
-    'TimeLens_Charades_4fps_limit_512': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=4.0, frames_limit=512),
-    'TimeLens_ActivityNet_4fps_limit_512': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=4.0, frames_limit=512),
-    'TimeLens_QVHighlights_4fps_limit_512': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=4.0, frames_limit=512),
     'TimeLens_Charades_4fps': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=4.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=128000*32*32),
     'TimeLens_ActivityNet_4fps': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=4.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=128000*32*32),
     'TimeLens_QVHighlights_4fps': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=4.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=128000*32*32),
-    'TimeLens_Charades_Reason_4fps': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=4.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=128000*32*32, reason=True),
-    'TimeLens_ActivityNet_Reason_4fps': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=4.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=128000*32*32, reason=True),
-    'TimeLens_QVHighlights_Reason_4fps': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=4.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=128000*32*32, reason=True),
-    'TimeLens_Charades_2fps_limit_512_px640_ctx51.2k': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=2.0, frames_limit=512, min_pixels=32*32, max_pixels=640*640, total_pixels=51200*32*32),
-    'TimeLens_ActivityNet_2fps_limit_512_px640_ctx51.2k': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=2.0, frames_limit=512, min_pixels=32*32, max_pixels=640*640, total_pixels=51200*32*32),
-    'TimeLens_QVHighlights_2fps_limit_512_px640_ctx51.2k': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=2.0, frames_limit=512, min_pixels=32*32, max_pixels=640*640, total_pixels=51200*32*32),
-    'TimeLens_Charades_1fps_limit_32': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=1.0, frames_limit=32),
-    'TimeLens_ActivityNet_1fps_limit_32': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=1.0, frames_limit=32),
-    'TimeLens_QVHighlights_1fps_limit_32': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=1.0, frames_limit=32),
-    'TimeLens_Charades_4fps_limit_2048_px640_80kctx': partial(TimeLens_Charades, dataset='TimeLens_Charades', fps=4.0, frames_limit=2048, min_pixels=28*28, max_pixels=640*640, total_pixels=80000*2*4*14*14),
-    'TimeLens_ActivityNet_2fps_limit_512_448px_80kctx': partial(TimeLens_ActivityNet, dataset='TimeLens_ActivityNet', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
-    'TimeLens_QVHighlights_2fps_limit_512_448px_80kctx': partial(TimeLens_QVHighlights, dataset='TimeLens_QVHighlights', fps=2.0, frames_limit=512, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 tvbench_dataset = {
-    'TVBench_1fps_limit_512': partial(TVBench, dataset='TVBench', fps=1.0, frames_limit=512),
-    'TVBench_2fps_limit_512': partial(TVBench, dataset='TVBench', fps=2.0, frames_limit=512),
-    'TVBench_2fps_limit_768': partial(TVBench, dataset='TVBench', fps=2.0, frames_limit=768),
-    'TVBench_4fps_limit_512': partial(TVBench, dataset='TVBench', fps=4.0, frames_limit=512),
-    'TVBench_1fps_limit_32': partial(TVBench, dataset='TVBench', fps=1.0, frames_limit=32),
-    'TVBench_8fps': partial(TVBench, dataset='TVBench', fps=8.0),
     'TVBench_8fps_limit_2048_448px_80kctx': partial(TVBench, dataset='TVBench', fps=8.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 motionbench_dataset = {
-    'MotionBench_8frame': partial(MotionBench, dataset='MotionBench', nframe=8),
-    'MotionBench_16frame': partial(MotionBench, dataset='MotionBench', nframe=16),
-    'MotionBench_1fps': partial(MotionBench, dataset='MotionBench', fps=1.0),
-    'MotionBench_2fps': partial(MotionBench, dataset='MotionBench', fps=2.0),
-    'MotionBench_8fps': partial(MotionBench, dataset='MotionBench', fps=8.0),
-    'MotionBench_2fps_limit_512': partial(MotionBench, dataset='MotionBench', fps=2.0, frames_limit=512),
-    'MotionBench_2fps_limit_768': partial(MotionBench, dataset='MotionBench', fps=2.0, frames_limit=768),
-    'MotionBench_1fps_limit_32': partial(MotionBench, dataset='MotionBench', fps=1.0, frames_limit=32),
     'MotionBench_8fps_limit_2048_448px_80kctx': partial(MotionBench, dataset='MotionBench', fps=8.0, frames_limit=2048, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 vue_tr_dataset = {
-    'VUE_TR_1fps_limit_768': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=768),
-    'VUE_TR_1fps_limit_512': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=512),
-    'VUE_TR_1fps_limit_128_ctx12.8k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=128, total_pixels=12800*32*32),
-    'VUE_TR_1fps': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'VUE_TR_2fps': partial(VUE_TR, dataset='VUE_TR', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'VUE_TR_1fps_limit_512_px480_ctx51.2k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=51200*32*32),
-    'VUE_TR_1fps_limit_512_px480_ctx51.2k_fixprompt': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=51200*32*32),
-    # Grid: {1,2}fps × {512,768} frames × {256,360,480,640} max side × {12800,25600,51200,76800}×32×32 total_pixels; min_pixels=32*32
-    'VUE_TR_1fps_limit_768_px480_ctx76.8k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'VUE_TR_1fps_limit_768_px480_ctx76.8k_fixprompt': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'VUE_TR_1fps_limit_1024_px480_ctx76.8k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'VUE_TR_1fps_limit_1024_px480_ctx102.4k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=102400*32*32),
-    'VUE_TR_1fps_limit_1024_px480_ctx102.4k_fixprompt': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=102400*32*32),
-    'VUE_TR_1fps_limit_1024_px480_ctx128k_fixprompt': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
-    'VUE_TR_1fps_limit_2048_px480_ctx204.8k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=204800*32*32),
-    'VUE_TR_1fps_limit_2048_px480_ctx204.8k_fixprompt': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=204800*32*32),
     'VUE_TR_1fps_limit_2048_px480_ctx128k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
-    'VUE_TR_1fps_limit_2048_px480_ctx128k_fixprompt': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
-    'VUE_TR_Reason_1fps_limit_2048_px480_ctx128k': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32, reason=True),
-    'VUE_TR_1fps_limit_512_448px_80kctx': partial(VUE_TR, dataset='VUE_TR', fps=1.0, frames_limit=512, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 moment_seeker_dataset = {
-    'MomentSeeker_2fps_limit_768_px480_ctx80k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=80000*2*28*28),
-    'MomentSeeker_1fps_limit_128_px480_ctx12.8k': partial(MomentSeeker, dataset='MomentSeeker', fps=1.0, frames_limit=128, min_pixels=32*32, max_pixels=480*480, total_pixels=12800*32*32),
-    'MomentSeeker_1fps_limit_512_px480_ctx16k': partial(MomentSeeker, dataset='MomentSeeker', fps=1.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=16000*32*32),
-    'MomentSeeker_1fps_limit_512_px480_ctx51.2k': partial(MomentSeeker, dataset='MomentSeeker', fps=1.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=51200*32*32),
-    'MomentSeeker_2fps_limit_512_px480_ctx51.2k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=51200*32*32),
-    'MomentSeeker_1fps_limit_768_px480_ctx76.8k': partial(MomentSeeker, dataset='MomentSeeker', fps=1.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'MomentSeeker_2fps_limit_768_px480_ctx76.8k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'MomentSeeker_1fps_limit_1024_px480_ctx102.4k': partial(MomentSeeker, dataset='MomentSeeker', fps=1.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=102400*32*32),
-    'MomentSeeker_2fps_limit_1024_px480_ctx102.4k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=102400*32*32),
-    'MomentSeeker_1fps_limit_2048_px480_ctx204.8k': partial(MomentSeeker, dataset='MomentSeeker', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=204800*32*32),
-    'MomentSeeker_2fps_limit_2048_px480_ctx204.8k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=204800*32*32),
     'MomentSeeker_2fps_limit_2048_px480_ctx128k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
-    'MomentSeeker_Reason_2fps_limit_2048_px480_ctx128k': partial(MomentSeeker, dataset='MomentSeeker', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32, reason=True),
 }
 
 ego4d_nlq_v2_dataset = {
-    'Ego4D-NLQ-v2_1fps_limit_64_px480_ctx12.8k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=1.0, frames_limit=64, min_pixels=32*32, max_pixels=480*480, total_pixels=12800*32*32),
-    'Ego4D-NLQ-v2_1fps_limit_768_px480_ctx76.8k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=1.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'Ego4D-NLQ-v2_2fps_limit_768_px480_ctx76.8k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=2.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
-    'Ego4D-NLQ-v2_1fps_limit_1024_px480_ctx102.4k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=1.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=102400*32*32),
-    'Ego4D-NLQ-v2_2fps_limit_1024_px480_ctx102.4k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=2.0, frames_limit=1024, min_pixels=32*32, max_pixels=480*480, total_pixels=102400*32*32),
-    'Ego4D-NLQ-v2_1fps_limit_2048_px480_ctx128k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
     'Ego4D-NLQ-v2_2fps_limit_2048_px480_ctx128k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
-    'Ego4D-NLQ-v2_Reason_2fps_limit_2048_px480_ctx128k': partial(Ego4DNLQv2, dataset='Ego4D-NLQ-v2', fps=2.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32, reason=True),
 }
 
 vue_tr_v2_dataset = {
-    'VUE_TR_V2_1fps_limit_128_px480_ctx12.8k': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=128, min_pixels=32*32, max_pixels=480*480, total_pixels=12800*32*32),
-    'VUE_TR_V2_1fps_limit_768': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=768),
-    'VUE_TR_V2_1fps_limit_512': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=512),    
-    'VUE_TR_V2_1fps': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=640*640, total_pixels=96000*32*32),
-    'VUE_TR_V2_1fps_limit_512_px480_ctx16k': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=16000*32*32),
-    'VUE_TR_V2_1fps_limit_512_px480_ctx51.2k': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=512, min_pixels=32*32, max_pixels=480*480, total_pixels=51200*32*32),
-    'VUE_TR_V2_1fps_limit_768_px480_ctx76.8k_fixprompt': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=768, min_pixels=32*32, max_pixels=480*480, total_pixels=76800*32*32),
     'VUE_TR_V2_1fps_limit_2048_px480_ctx128k': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32),
-    'VUE_TR_V2_Reason_1fps_limit_2048_px480_ctx128k': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=2048, min_pixels=32*32, max_pixels=480*480, total_pixels=128000*32*32, reason=True),
-    'VUE_TR_V2_1fps_limit_768_px480_80kctx': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=768, min_pixels=28*28, max_pixels=480*480, total_pixels=80000*2*4*14*14),
-    'VUE_TR_V2_1fps_limit_768_448px_80kctx': partial(VUE_TR_V2, dataset='VUE_TR_V2', fps=1.0, frames_limit=768, min_pixels=28*28, max_pixels=448*448, total_pixels=80000*2*4*14*14),
 }
 
 dream_1k_dataset = {

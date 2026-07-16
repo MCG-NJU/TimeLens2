@@ -6,6 +6,7 @@ from pathlib import Path
 from xtuner.v1.config import AdamWConfig, FSDPConfig, LRConfig
 from xtuner.v1.datasets import Qwen3VLTokenizeFnConfig
 from xtuner.v1.datasets.config import DataloaderConfig, DatasetConfig
+from xtuner.v1.datasets.mllm_tokenize_fn import OSSLoaderConfig
 from xtuner.v1.loss import CELossConfig
 from xtuner.v1.model import Qwen3VLDense4BConfig
 from xtuner.v1.train import ResumeConfig, TrainerConfig
@@ -38,6 +39,7 @@ dataloader_num_workers = 2
 
 
 model_cfg = Qwen3VLDense4BConfig(freeze_vision=True, freeze_language=False)
+oss_loader_cfg = OSSLoaderConfig(backend_kwargs={"conf_path": "~/petreloss.conf"})
 
 ds_collections = json.loads(meta_data_path.read_text(encoding="utf-8"))
 dataset_config = []
@@ -67,6 +69,7 @@ for name, data in ds_collections.items():
                 processor_path=model_path,
                 min_pixels=data.get("min_pixels", 4 * 32 * 32),
                 max_pixels=data.get("max_pixels", 480 * 480),
+                oss_loader_cfg=oss_loader_cfg,
                 video_min_total_pixels=data.get("video_min_total_pixels", 2 * 32 * 32),
                 video_max_total_pixels=data.get(
                     "video_max_total_pixels", int(sample_max_length * 0.8 * 2 * 32 * 32)

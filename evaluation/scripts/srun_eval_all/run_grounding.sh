@@ -21,6 +21,11 @@ export LMUData="${LMUData:-${ROOT}/data/lmudata}"
 export VLMEVAL_TRUST_LOCAL_IMAGE_PATHS="${VLMEVAL_TRUST_LOCAL_IMAGE_PATHS:-1}"
 export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
 
+EXTRA_ARGS=()
+if [[ -n "${JUDGE:-}" ]]; then
+  EXTRA_ARGS+=(--judge "${JUDGE}")
+fi
+
 exec "${PYTHON_BIN}" -m torch.distributed.run \
   --nproc-per-node="${NPROC_PER_NODE}" \
   --master-port="${MASTER_PORT:-29501}" \
@@ -30,4 +35,5 @@ exec "${PYTHON_BIN}" -m torch.distributed.run \
   --work-dir "${WORK_DIR:-${ROOT}/outputs}" \
   --verbose \
   --reuse \
-  --check-extracted-frames "${CHECK_EXTRACTED_FRAMES:-True}"
+  --check-extracted-frames "${CHECK_EXTRACTED_FRAMES:-True}" \
+  "${EXTRA_ARGS[@]}"

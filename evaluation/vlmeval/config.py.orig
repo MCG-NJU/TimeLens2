@@ -2001,22 +2001,7 @@ interns1_groups = [
 interns1_series = {}
 for group in interns1_groups:
     interns1_series.update(group)
-
-videochat3_series = {
-    "VideoChat3-4B": partial(
-        VideoChat3,
-        model_path="MCG-NJU/VideoChat3-4B",
-        use_custom_prompt=False,
-        use_vllm=False,
-        temperature=0.01,
-        max_new_tokens=4096,
-        repetition_penalty=1.0,
-        presence_penalty=1.5,
-        top_p=0.001,
-        top_k=1,
-    ),
-}
-
+    
 timelens2_release_series = {
     "TimeLens2-4B": partial(
         Qwen3VLChat,
@@ -2047,7 +2032,7 @@ timelens2_release_series = {
 supported_VLM = {}
 
 model_groups = [
-    timelens2_release_series, videochat3_series,
+    timelens2_release_series,
     ungrouped, o1_apis, api_models, xtuner_series, qwen_series, llava_series, granite_vision_series,
     internvl_series, yivl_series, xcomposer_series, minigpt4_series, 
     idefics_series, instructblip_series, deepseekvl_series, deepseekvl2_series, 

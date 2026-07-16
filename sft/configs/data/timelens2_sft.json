@@ -1,48 +1,48 @@
 {
   "timelens2_93k_short_14891": {
-    "media_root": "data/timelens2-93k/videos",
+    "media_root": "pnorm2:s3://longvideodb-373k-videos-decompress/videos/",
     "anno_path": "training_data_annotations/timelens2-93k/timelens2-93k_short.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
   "timelens2_93k_long_le6000s_8902": {
-    "media_root": "data/timelens2-93k/videos_2fps",
+    "media_root": "videogpu2:s3://lvdb-2fps-10min/videos_2fps/",
     "anno_path": "training_data_annotations/timelens2-93k/timelens2-93k_long.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
   "timelens_100k_0_to_60_5300": {
-    "media_root": "data/timelens-100k/videos",
+    "media_root": "pnorm2:s3://videochat3/TimeLens-100K/videos/",
     "anno_path": "training_data_annotations/timelens-100k/timelens-100k_0-to-60_5300_format2.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
   "timelens_100k_60_to_120_6157": {
-    "media_root": "data/timelens-100k/videos",
+    "media_root": "pnorm2:s3://videochat3/TimeLens-100K/videos/",
     "anno_path": "training_data_annotations/timelens-100k/timelens-100k_60-to-120_6157_format2.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
   "timelens_100k_120_to_180_6840": {
-    "media_root": "data/timelens-100k/videos",
+    "media_root": "pnorm2:s3://videochat3/TimeLens-100K/videos/",
     "anno_path": "training_data_annotations/timelens-100k/timelens-100k_120-to-180_6840_format2.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
   "timelens_100k_over180_1137": {
-    "media_root": "data/timelens-100k/videos_frames",
+    "media_root": "pnorm2:s3://videochat3/TimeLens-100K/videos_frames/",
     "anno_path": "training_data_annotations/timelens-100k/timelens-100k_over180_1137_format2.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,
     "video_max_frames": 2048
   },
   "ego4d_nlq_1270": {
-    "media_root": "data/ego4d/videos",
+    "media_root": "pnorm2:s3://ego4d_v2/320p/",
     "anno_path": "training_data_annotations/ego4d/ego4d_nlq_train_v2_xtunerformat.jsonl",
     "sample_ratio": 1.0,
     "fps": 2,

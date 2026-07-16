@@ -255,6 +255,13 @@ def main():
     if args.device != "auto":
         raise ValueError('Only device="auto" is supported.')
 
+    # Clusterx may inject empty distributed variables. Transformers converts
+    # WORLD_SIZE to int when device_map="auto", so an empty string must be
+    # treated the same as an unset variable. Preserve every non-empty value.
+    for name in ("WORLD_SIZE", "RANK", "LOCAL_RANK"):
+        if os.environ.get(name) == "":
+            os.environ.pop(name)
+
     args.seed = set_random_seed(args.seed)
     print(f"Random seed (base) = {args.seed}")
 

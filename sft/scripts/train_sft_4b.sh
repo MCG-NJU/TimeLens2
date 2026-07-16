@@ -8,7 +8,9 @@ WORK_DIR="${ROOT}/outputs/sft-4b"
 
 mkdir -p "${WORK_DIR}"
 LOG_TIMESTAMP="$(date +%Y%m%d%H%M%S)"
-LOG_FILE="${WORK_DIR}/train-${LOG_TIMESTAMP}.log"
+LOG_NODE_RANK="${NODE_RANK:-${RANK:-0}}"
+LOG_RUN_ID="${DIST_RUN_ID:-local}"
+LOG_FILE="${WORK_DIR}/train-${LOG_RUN_ID}-node${LOG_NODE_RANK}-${LOG_TIMESTAMP}.log"
 echo "Logging train output to ${LOG_FILE}"
 bash "${SCRIPT_DIR}/train.sh" "${ROOT}/configs/qwen3_vl_4b_sft.py" \
   2>&1 | tee -a "${LOG_FILE}"
