@@ -3,6 +3,10 @@
 > 🔎 **Find the moments that matter.** TimeLens2 turns natural-language queries
 > into precise, traceable evidence intervals on the video timeline.
 
+<p align="center">
+  <img src="assets/timelens2_teaser.jpg" alt="TimeLens2 as a generalist video temporal-grounding model across seven benchmarks" width="100%">
+</p>
+
 ## 🔍 What is TimeLens2?
 
 TimeLens2 is a generalist video temporal-grounding MLLM. Given a video and a natural-language description or question, it finds
