@@ -28,9 +28,9 @@ used in the project:
 
 | Module | Contents | Main entry points |
 | --- | --- | --- |
-| 🧠 `sft/` | XTuner-based supervised fine-tuning | `scripts/train_sft_4b.sh`, `scripts/train_sft_8b.sh` |
-| 🎯 `grpo/` | Off-policy rollout and GRPO | `scripts/rollout_timelens2.sh`, `scripts/train_grpo_4b.sh`, `scripts/train_grpo_8b.sh` |
-| 📊 `evaluation/` | VLMEvalKit with the TimeLens2 grounding entry | `scripts/srun_eval_all/run_grounding.sh` |
+| 🧠&nbsp;`sft/` | XTuner-based supervised fine-tuning | `scripts/train_sft_4b.sh`, `scripts/train_sft_8b.sh` |
+| 🎯&nbsp;`grpo/` | Off-policy rollout and GRPO | `scripts/rollout_timelens2.sh`, `scripts/train_grpo_4b.sh`, `scripts/train_grpo_8b.sh` |
+| 📊&nbsp;`evaluation/` | VLMEvalKit with the TimeLens2 grounding entry | `scripts/srun_eval_all/run_grounding.sh` |
 
 ## 🤗 Released Resources
 
