@@ -2020,7 +2020,7 @@ videochat3_series = {
 timelens2_release_series = {
     "TimeLens2-4B": partial(
         Qwen3VLChat,
-        model_path=os.environ.get("TIMELENS2_4B_MODEL", "MCG-NJU/TimeLens2-4B"),
+        model_path="MCG-NJU/TimeLens2-4B",
         use_custom_prompt=False,
         use_vllm=False,
         temperature=0.01,
@@ -2032,7 +2032,7 @@ timelens2_release_series = {
     ),
     "TimeLens2-8B": partial(
         Qwen3VLChat,
-        model_path=os.environ.get("TIMELENS2_8B_MODEL", "MCG-NJU/TimeLens2-8B"),
+        model_path="MCG-NJU/TimeLens2-8B",
         use_custom_prompt=False,
         use_vllm=False,
         temperature=0.01,

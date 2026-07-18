@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 export PYTHON="${PYTHON:-python}"
-export DATA_CONFIG="${DATA_CONFIG:-${ROOT}/outputs/rollout/timelens2_93k/train_data_config.json}"
+export DATA_CONFIG="${DATA_CONFIG:-${ROOT}/configs/data/timelens2_rollout.json}"
 export MODEL_PATH="${MODEL_PATH:?set MODEL_PATH to the 8B SFT checkpoint}"
 export MODEL_ID="qwen3-vl-8b"
 export OUTPUT_ROOT="${OUTPUT_ROOT:-${ROOT}/outputs/grpo/timelens2-8b}"

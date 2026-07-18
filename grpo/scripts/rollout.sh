@@ -3,7 +3,7 @@
 # add a new source by editing that file (no new bash args).
 #
 # Multi-node example (one srun task per node, 8 GPUs/node):
-#   DATA_CONFIG=configs/data/example_lvdb_timelens.json \
+#   DATA_CONFIG=configs/data/timelens2.json \
 #   MODEL_PATH=/path/to/sft_ckpt \
 #   PRED_ROOT=output/rollout/qwen3vl_4b_64k_2fps_1024f \
 #   srun -N16 -n16 --ntasks-per-node=1 --cpus-per-task=128 --gres=gpu:8 \

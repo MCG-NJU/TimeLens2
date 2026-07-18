@@ -1,0 +1,11 @@
+{
+  "timelens2-93k": {
+    "anno_path": "data/rollouts/timelens2-93k.jsonl",
+    "mp4_root": "/data/s3/pnorm2/longvideodb-373k-videos-decompress/videos",
+    "frames_root": "/data/s3/videogpu2/lvdb-2fps-10min/videos_2fps"
+  },
+  "timelens-100k": {
+    "anno_path": "data/rollouts/timelens-100k.jsonl",
+    "mp4_root": "/data/s3/videogpu/zhuyuhan/TimeLens-100K/videos/"
+  }
+}

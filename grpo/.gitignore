@@ -4,8 +4,9 @@ __pycache__
 *.py[cod]
 *$py.class
 
-# Temporary data
-/data
+# Bundled annotations and official rollout responses are versioned. Keep any
+# locally downloaded videos out of Git.
+/data/videos/
 .DS_Store
 ._*
 /logs

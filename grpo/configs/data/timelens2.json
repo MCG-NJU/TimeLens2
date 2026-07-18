@@ -1,0 +1,13 @@
+{
+  "timelens2-93k": {
+    "anno_path": "data/annotations/timelens2-93k.jsonl",
+    "mp4_root": "/data/s3/pnorm2/longvideodb-373k-videos-decompress/videos",
+    "frames_root": "/data/s3/videogpu2/lvdb-2fps-10min/videos_2fps",
+    "prompt_template": "You are given a video.\nTask: temporal retrieval.\nGiven the query: \"{query}\", return ALL time spans (in seconds) where the query is relevant.\nOutput format MUST be a JSON array of [start, end] pairs, e.g. [[0, 3.5], [10, 12]].\n"
+  },
+  "timelens-100k": {
+    "anno_path": "data/annotations/timelens-100k.jsonl",
+    "mp4_root": "/data/s3/videogpu/zhuyuhan/TimeLens-100K/videos/",
+    "prompt_template": "Please find the visual event described by the sentence '{query}', determining its starting and ending times.\nReturn the result strictly as [[start, end]]] (in seconds)."
+  }
+}

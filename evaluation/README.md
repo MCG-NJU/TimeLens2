@@ -1,11 +1,6 @@
 # 📊 TimeLens2 Evaluation
 
-This directory contains the full VLMEvalKit runtime used by TimeLens2, including
-its model/dataset registries, tests, workflows, documentation, and assets. The
-public aliases `TimeLens2-4B` and `TimeLens2-8B` are added without replacing the
-original registry. Historical experiment launchers and internal infrastructure
-wrappers are excluded; the official grounding entry and the reusable frame
-pre-extraction helper are retained.
+We employ [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) to evaluate performance on the video temporal grounding benchmark.
 
 ## 🛠️ Install
 
@@ -40,17 +35,17 @@ may be resumed or inspected from another machine.
 bash scripts/srun_eval_all/run_grounding.sh
 ```
 
-The default command evaluates **both released models on all seven datasets**.
-For a local checkpoint, always set the model alias, checkpoint path, dataset,
-and a checkpoint-specific work directory explicitly:
+The default command evaluates **both TimeLens2-4B and TimeLens2-8B on all seven datasets**.
+For a local checkpoint, replace the corresponding `model_path` in
+`vlmeval/config.py`, then set the model alias, dataset, and a
+checkpoint-specific output directory explicitly:
 
 ```bash
-TIMELENS2_4B_MODEL=/path/to/hf-99 \
 MODELS="TimeLens2-4B" \
 DATASETS="TimeLens_Charades_4fps" \
-NPROC_PER_NODE=8 \
+N_GPU=8 \
 CHECK_EXTRACTED_FRAMES=False \
-WORK_DIR=outputs/sft4b-hf99 \
+OUTPUT_DIR=outputs/timelens2-4b \
 bash scripts/srun_eval_all/run_grounding.sh
 ```
 
@@ -62,34 +57,30 @@ DATASETS="VUE_TR_V2_1fps_limit_2048_px480_ctx128k" \
 bash scripts/srun_eval_all/run_grounding.sh
 ```
 
-If a benchmark uses an external judge, pass the registered judge name with
-`JUDGE`, for example:
+The entry point exposes `USE_LLM_JUDGE=auto|true|false`. Its default is `auto`:
+the three TimeLens benchmarks use exact parsing, while VUE-TR, VUE-TR-V2,
+MomentSeeker, and Ego4D-NLQ use the configured LLM judge.
 
 ```bash
-JUDGE="qwen3-235b-a22b-thinking-2507" \
-DATASETS="VUE_TR_V2_1fps_limit_2048_px480_ctx128k" \
+USE_LLM_JUDGE=auto \
+LLM_JUDGE="qwen3-235b-a22b-thinking-2507" \
+DATASETS="TimeLens_Charades_4fps Ego4D-NLQ-v2_2fps_limit_2048_px480_ctx128k" \
 bash scripts/srun_eval_all/run_grounding.sh
 ```
 
-The official evaluation uses no external judge for the three TimeLens subsets.
-It uses a configured judge for VUE-TR, VUE-TR-V2, MomentSeeker, and Ego4D-NLQ.
-The example judge name is the one used in our environment; replace it with a
-judge registered and reachable in yours. Inference can finish without that API,
-but judge-dependent scoring cannot.
+Set `USE_LLM_JUDGE=true` to force the judge for every selected benchmark, or
+`USE_LLM_JUDGE=false` to disable it everywhere. The
+example judge is the one used in our environment; its served-model alias
+defaults to `LOCAL_LLM=qwen3-235b`. For another judge service, set `LLM_JUDGE`
+and `LOCAL_LLM` as required by that service.
 
-Set `TIMELENS2_4B_MODEL` or `TIMELENS2_8B_MODEL` to evaluate a local checkpoint
-instead of the Hugging Face model ID.
+`run.py` is called with `--reuse`, so do
+not reuse the same `OUTPUT_DIR` and model alias for a different checkpoint unless
+you intentionally want existing predictions to be reused.
 
-Run each benchmark as a separate 8-GPU job. This keeps failures isolated and
-matches the released evaluation setup. `run.py` is called with `--reuse`, so do
-not reuse the same `WORK_DIR` and model alias for a different checkpoint unless
-you intentionally want existing predictions to be reused; a fresh work
-directory per checkpoint avoids stale results.
-
-`CHECK_EXTRACTED_FRAMES=True` validates cached frames before inference and can
-add a long startup scan. Set it to `False` when decoding videos directly or when
+`CHECK_EXTRACTED_FRAMES=True` validates cached frames before inference. Set it to `False` when decoding videos directly or when
 the frame cache has already been validated. For repeated runs, pre-extracting
-frames once is usually faster:
+frames once is much faster:
 
 ```bash
 python scripts/pre_extract_video_frames/extract_video_frames.py \
