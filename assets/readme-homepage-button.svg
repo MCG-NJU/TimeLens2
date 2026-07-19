@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="38" viewBox="0 0 146 38" role="img" aria-label="Homepage">
+  <rect x="0.5" y="0.5" width="145" height="37" rx="7.5" fill="#F5F2EC" stroke="#CFC9BE"/>
+  <rect x="7" y="6" width="27" height="26" rx="3" fill="#ECE7DE"/>
+  <text x="8.5" y="24.5" fill="#171716" font-family="Georgia,'Times New Roman',serif" font-size="14.5" font-weight="700">TL</text>
+  <text x="25" y="24.5" fill="#C45F3C" font-family="Georgia,'Times New Roman',serif" font-size="14.5" font-weight="700">2</text>
+  <text x="44" y="24.5" fill="#171716" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15.5" font-weight="650">Homepage</text>
+</svg>

@@ -1,9 +1,9 @@
 # TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs
 
 <p>
-  <a href="https://mcg-nju.github.io/TimeLens2"><img src="docs/favicon.png" alt="" height="20" align="absmiddle"> Homepage</a>
+  <a href="https://mcg-nju.github.io/TimeLens2"><img src="assets/readme-homepage-button.svg" alt="Homepage" height="38"></a>
   &nbsp;&nbsp;
-  <a href="https://huggingface.co/collections/MCG-NJU/timelens2"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" height="20" align="absmiddle"> Model &amp; Data</a>
+  <a href="https://huggingface.co/collections/MCG-NJU/timelens2"><img src="assets/readme-huggingface-button.svg" alt="Model &amp; Data" height="38"></a>
 </p>
 
 > 🔎 **Find the moments that matter.** TimeLens2 turns natural-language queries
