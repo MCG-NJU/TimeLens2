@@ -5,7 +5,7 @@
     <img alt="TimeLens2 Homepage" src="https://img.shields.io/badge/TL2-Homepage-555555?labelColor=c96343&amp;color=555555" height="32"/>
   </a>
   <a href="https://huggingface.co/collections/MCG-NJU/timelens2">
-    <img alt="TimeLens2 Models &amp; Data" src="https://img.shields.io/badge/Hugging%20Face-Models%20%26%20Data-555555?labelColor=ff9d0b&amp;color=555555&amp;logo=huggingface&amp;logoColor=white" height="32"/>
+    <img alt="TimeLens2 Models &amp; Data" src="https://img.shields.io/badge/Hugging%20Face-Models%20%26%20Data-555555?labelColor=ff9d0b&amp;color=555555" height="32"/>
   </a>
 </div>
 
