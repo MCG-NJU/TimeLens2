@@ -84,6 +84,11 @@ Both launchers default to `configs/data/timelens2_rollout.json`, which contains
 the bundled rollout files for both `timelens2-93k` and `timelens-100k`. After
 downloading the videos, edit only the media roots in that config.
 
+The default `twass1` reward uses \(\beta=1\) and target-duration normalization:
+\(R_{\mathrm{TW}}=\exp(-W_1/|\operatorname{merge}(\mathcal{Y})|)\). Predictions
+and targets are each converted to uniform distributions over their own merged
+temporal support before computing the exact one-dimensional \(W_1\).
+
 To train from a newly generated rollout instead, override the default:
 
 ```bash
