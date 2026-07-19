@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="170" viewBox="0 0 960 170" role="img" aria-labelledby="title desc">
   <title id="title">TimeLens2</title>
   <desc id="desc">Generalist video temporal grounding with multimodal large language models</desc>
-  <rect x="1" y="1" width="1198" height="278" rx="18" fill="#F4F1EA" stroke="#D8D2C7" stroke-width="2"/>
-  <text x="62" y="56" fill="#B75637" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3.2">GENERALIST VIDEO TEMPORAL GROUNDING</text>
-  <line x1="62" y1="80" x2="1138" y2="80" stroke="#D8D2C7" stroke-width="2"/>
-  <text x="62" y="188" fill="#171716" font-family="Georgia,'Times New Roman',serif" font-size="104" font-weight="600" letter-spacing="-3">TimeLens<tspan fill="#C96343">2</tspan></text>
-  <text x="66" y="232" fill="#5A5752" font-family="Arial,Helvetica,sans-serif" font-size="24" letter-spacing=".2">Generalist video temporal grounding with multimodal LLMs</text>
+  <text x="480" y="105" text-anchor="middle" fill="#171716" font-family="Georgia,'Times New Roman',serif" font-size="100" font-weight="600" letter-spacing="-3">TimeLens<tspan fill="#C96343">2</tspan></text>
+  <text x="480" y="148" text-anchor="middle" fill="#5F5A54" font-family="Arial,Helvetica,sans-serif" font-size="21" letter-spacing=".35">Generalist video temporal grounding with multimodal LLMs</text>
 </svg>

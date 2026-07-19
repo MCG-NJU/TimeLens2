@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="assets/readme-header.svg" alt="TimeLens2 — Generalist video temporal grounding with multimodal LLMs" width="100%"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme-header-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="assets/readme-header.svg"/>
+    <img src="assets/readme-header.svg" alt="TimeLens2 — Generalist video temporal grounding with multimodal LLMs" width="720"/>
+  </picture>
 </p>
 
 <p align="center">

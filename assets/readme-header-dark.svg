@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="170" viewBox="0 0 960 170" role="img" aria-labelledby="title desc">
+  <title id="title">TimeLens2</title>
+  <desc id="desc">Generalist video temporal grounding with multimodal large language models</desc>
+  <text x="480" y="105" text-anchor="middle" fill="#F5F1E8" font-family="Georgia,'Times New Roman',serif" font-size="100" font-weight="600" letter-spacing="-3">TimeLens<tspan fill="#E07856">2</tspan></text>
+  <text x="480" y="148" text-anchor="middle" fill="#AFA89E" font-family="Arial,Helvetica,sans-serif" font-size="21" letter-spacing=".35">Generalist video temporal grounding with multimodal LLMs</text>
+</svg>
