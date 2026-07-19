@@ -279,10 +279,12 @@ def temporal_precision(A, B) -> float:
 def temporal_wasserstein_reward(pred, gt, beta: float = 3.0) -> float:
     """
     pred, gt: [[start, end], ...]
-    R = exp(-beta * W1 / L)
+    R = exp(-beta * W1 / |merge(gt)|)
 
-    Pred / GT are merged for overlaps, normalized to uniform distributions on their
-    own union support; W1 is the L1 distance between CDFs integrated over the union span.
+    Pred / GT are merged, then normalized to uniform distributions on their own
+    merged support. W1 is the L1 distance between their CDFs, and the reward is
+    normalized only by the merged target duration so broad predictions cannot
+    enlarge their own normalization factor.
     """
 
     def merge_intervals(intervals):
@@ -330,10 +332,6 @@ def temporal_wasserstein_reward(pred, gt, beta: float = 3.0) -> float:
     if pred_len == 0 or gt_len == 0:
         return 0.0
 
-    union_len = total_length(merge_intervals(pred + gt))
-    if union_len == 0:
-        return 0.0
-
     pred_density = 1.0 / pred_len
     gt_density = 1.0 / gt_len
 
@@ -358,7 +356,7 @@ def temporal_wasserstein_reward(pred, gt, beta: float = 3.0) -> float:
         else:
             w1 += (abs(y0) + abs(y1)) * (b - a) / 2.0
 
-    return math.exp(-beta * w1 / union_len)
+    return math.exp(-beta * w1 / max(gt_len, 1e-12))
 
 
 def _valid_merged_intervals(intervals) -> list[tuple[float, float]]:

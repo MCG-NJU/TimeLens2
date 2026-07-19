@@ -3,7 +3,7 @@
 A reward *spec* is a comma-separated list of reward names, each with an optional
 ``:weight`` (default ``1.0``), e.g. ``"tiou"``, ``"tiou,format"``,
 ``"tiou:1.0,format:0.2"`` or ``"tiou,parse:0.2"``. ``twass`` accepts an optional
-numeric suffix for ``beta`` in ``R = exp(-beta * W1 / L)``, e.g. ``twass1`` (beta=1),
+numeric suffix for ``beta`` in ``R = exp(-beta * W1 / |merge(target)|)``, e.g. ``twass1`` (beta=1),
 ``twass3`` (beta=3); bare ``twass`` uses beta=3. ``tcgauss`` also accepts
 ``a<alpha>`` (e.g. ``tcgauss1a0.25``) and ``tbgauss`` accepts ``s<sigma_ratio>``
 (e.g. ``tbgauss1s0.08``). The spec used for a sample is
