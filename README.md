@@ -10,6 +10,9 @@
   <a href="https://mcg-nju.github.io/TimeLens2">
     <img alt="TimeLens2 Homepage" src="https://img.shields.io/badge/TL2-Homepage-555555?labelColor=c96343&amp;color=555555" height="32"/>
   </a>
+  <a href="https://arxiv.org/abs/2607.17423">
+    <img alt="TimeLens2 Paper on arXiv" src="https://img.shields.io/badge/Paper-arXiv%3A2607.17423-555555?labelColor=b31b1b&amp;color=555555" height="32"/>
+  </a>
   <a href="https://huggingface.co/collections/MCG-NJU/timelens2">
     <img alt="TimeLens2 Models &amp; Data" src="https://img.shields.io/badge/Hugging%20Face-Models%20%26%20Data-555555?labelColor=ff9d0b&amp;color=555555" height="32"/>
   </a>
