@@ -64,9 +64,9 @@ calibrates the predicted intervals with temporal rewards.
 | [TimeLens2-2B](https://huggingface.co/MCG-NJU/TimeLens2-2B) | SFT | 2B checkpoint · 44.5 average mIoU |
 | [TimeLens2-4B](https://huggingface.co/MCG-NJU/TimeLens2-4B) | SFT | 4B checkpoint · 47.7 average mIoU |
 | [TimeLens2-8B](https://huggingface.co/MCG-NJU/TimeLens2-8B) | SFT | 8B checkpoint · 48.0 average mIoU |
-| [TimeLens2-2B-SFT](https://huggingface.co/datasets/MCG-NJU/TimeLens2-2B-SFT) | SFT | 2B checkpoint for rollout generation and GRPO reproduction |
-| [TimeLens2-4B-SFT](https://huggingface.co/datasets/MCG-NJU/TimeLens2-4B-SFT) | SFT | 4B checkpoint for rollout generation and GRPO reproduction |
-| [TimeLens2-8B-SFT](https://huggingface.co/datasets/MCG-NJU/TimeLens2-8B-SFT) | SFT | 8B checkpoint for rollout generation and GRPO reproduction |
+| [TimeLens2-2B-SFT](https://huggingface.co/MCG-NJU/TimeLens2-2B-SFT) | SFT | 2B checkpoint for rollout generation and GRPO reproduction |
+| [TimeLens2-4B-SFT](https://huggingface.co/MCG-NJU/TimeLens2-4B-SFT) | SFT | 4B checkpoint for rollout generation and GRPO reproduction |
+| [TimeLens2-8B-SFT](https://huggingface.co/MCG-NJU/TimeLens2-8B-SFT) | SFT | 8B checkpoint for rollout generation and GRPO reproduction |
 | [TimeLens2-93K](https://huggingface.co/datasets/MCG-NJU/TimeLens2-93K) | Dataset | 23,793 videos · 93,232 temporal-grounding instances |
 
 The repository includes ready-to-use annotations and rollout data for the SFT
