@@ -55,15 +55,15 @@ repository.
 
 ## Models and data
 
-TimeLens2 uses two training stages: SFT
-learns evidence search and variable-cardinality interval generation; GRPO then
-calibrates the predicted intervals with temporal rewards.
+TimeLens2 uses two training stages. SFT learns evidence search and
+variable-cardinality interval generation; GRPO then calibrates the predicted
+intervals with temporal rewards.
 
 | Resource | Training stage | Description |
 | :--- | :--- | :--- |
-| [TimeLens2-2B](https://huggingface.co/MCG-NJU/TimeLens2-2B) | SFT | 2B checkpoint · 44.5 average mIoU |
-| [TimeLens2-4B](https://huggingface.co/MCG-NJU/TimeLens2-4B) | SFT | 4B checkpoint · 47.7 average mIoU |
-| [TimeLens2-8B](https://huggingface.co/MCG-NJU/TimeLens2-8B) | SFT | 8B checkpoint · 48.0 average mIoU |
+| [TimeLens2-2B](https://huggingface.co/MCG-NJU/TimeLens2-2B) | SFT + GRPO | 2B checkpoint · 44.5 average mIoU |
+| [TimeLens2-4B](https://huggingface.co/MCG-NJU/TimeLens2-4B) | SFT + GRPO | 4B checkpoint · 47.7 average mIoU |
+| [TimeLens2-8B](https://huggingface.co/MCG-NJU/TimeLens2-8B) | SFT + GRPO | 8B checkpoint · 48.0 average mIoU |
 | [TimeLens2-2B-SFT](https://huggingface.co/MCG-NJU/TimeLens2-2B-SFT) | SFT | 2B checkpoint for rollout generation and GRPO reproduction |
 | [TimeLens2-4B-SFT](https://huggingface.co/MCG-NJU/TimeLens2-4B-SFT) | SFT | 4B checkpoint for rollout generation and GRPO reproduction |
 | [TimeLens2-8B-SFT](https://huggingface.co/MCG-NJU/TimeLens2-8B-SFT) | SFT | 8B checkpoint for rollout generation and GRPO reproduction |
