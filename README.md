@@ -55,11 +55,9 @@ repository.
 
 ## Models and data
 
-TimeLens2 uses two training stages: long-context supervised fine-tuning (SFT)
+TimeLens2 uses two training stages: SFT
 learns evidence search and variable-cardinality interval generation; GRPO then
-calibrates the predicted intervals with temporal rewards. The SFT releases
-below provide 2B, 4B, and 8B temporal-grounding checkpoints for the training
-and reproduction workflows.
+calibrates the predicted intervals with temporal rewards.
 
 | Resource | Training stage | Description |
 | :--- | :--- | :--- |
