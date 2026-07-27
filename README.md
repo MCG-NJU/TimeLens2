@@ -55,17 +55,30 @@ repository.
 
 ## Models and data
 
-| Resource | Type | Description |
-| :--- | :--- | :--- |
-| [TimeLens2-4B](https://huggingface.co/MCG-NJU/TimeLens2-4B) | Model | Compact TimeLens2 checkpoint based on the 4B backbone |
-| [TimeLens2-8B](https://huggingface.co/MCG-NJU/TimeLens2-8B) | Model | Higher-capacity TimeLens2 checkpoint based on the 8B backbone |
-| [TimeLens2-93K](https://huggingface.co/datasets/MCG-NJU/TimeLens2-93K) | Dataset | 23,793 videos · 93,232 temporal-grounding pairs |
+TimeLens2 uses two training stages: long-context supervised fine-tuning (SFT)
+learns evidence search and variable-cardinality interval generation; GRPO then
+calibrates the predicted intervals with temporal rewards. The released
+`-SFT` checkpoints are the intermediate models immediately after the first
+stage. The main `TimeLens2-*` checkpoints are the final SFT + GRPO models
+reported in the paper.
 
-The repository includes the ready-to-use annotations and rollout data used by
-the provided SFT and GRPO recipes. Video files are distributed separately through
-the linked Hugging Face dataset and must be downloaded before training. To use
-another framework for SFT or RL, download the public data and convert it to that
-framework's required format.
+| Resource | Training stage | Description |
+| :--- | :--- | :--- |
+| [TimeLens2-2B](https://huggingface.co/MCG-NJU/TimeLens2-2B) | Final · SFT + GRPO | 2B final checkpoint · 44.5 average mIoU |
+| [TimeLens2-4B](https://huggingface.co/MCG-NJU/TimeLens2-4B) | Final · SFT + GRPO | 4B final checkpoint · 47.7 average mIoU |
+| [TimeLens2-8B](https://huggingface.co/MCG-NJU/TimeLens2-8B) | Final · SFT + GRPO | 8B final checkpoint · 48.0 average mIoU |
+| [TimeLens2-2B-SFT](https://huggingface.co/datasets/MCG-NJU/TimeLens2-2B-SFT) | Post-SFT | 2B intermediate checkpoint for rollout generation and GRPO reproduction |
+| [TimeLens2-4B-SFT](https://huggingface.co/datasets/MCG-NJU/TimeLens2-4B-SFT) | Post-SFT | 4B intermediate checkpoint for rollout generation and GRPO reproduction |
+| [TimeLens2-8B-SFT](https://huggingface.co/datasets/MCG-NJU/TimeLens2-8B-SFT) | Post-SFT | 8B intermediate checkpoint for rollout generation and GRPO reproduction |
+| [TimeLens2-93K](https://huggingface.co/datasets/MCG-NJU/TimeLens2-93K) | Dataset | 23,793 videos · 93,232 temporal-grounding instances |
+
+The repository includes ready-to-use annotations and rollout data for the SFT
+and GRPO recipes. To reproduce the second stage, download the matching
+`-SFT` checkpoint and set it as `MODEL_PATH` for rollout generation or GRPO
+training. Video files are distributed separately through the linked Hugging
+Face dataset and must be downloaded before training. To use another framework
+for SFT or RL, download the public data and convert it to that framework's
+required format.
 
 ## Codebase
 
