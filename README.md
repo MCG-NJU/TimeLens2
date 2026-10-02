@@ -119,13 +119,10 @@ thank their authors for open-sourcing these projects.
 ## Citation
 
 ```bibtex
-@misc{zhu2026timelens2,
-      title={TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs},
-      author={Yuhan Zhu and Changlian Ma and Xiangyu Zeng and Xinhao Li and Zhiqiu Zhang and Songze Li and Jun Zhang and Tianxiang Jiang and Yuandong Yang and Ziang Yan and Zikang Wang and Xinyu Chen and Haoran Chen and Shaowei Zhang and Limin Wang},
-      year={2026},
-      eprint={2607.17423},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2607.17423},
+@article{zhu2026timelens2,
+  title={TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs},
+  author={Zhu, Yuhan and Ma, Changlian and Zeng, Xiangyu and Li, Xinhao and Zhang, Zhiqiu and Li, Songze and Zhang, Jun and Jiang, Tianxiang and Yang, Yuandong and Yan, Ziang and others},
+  journal={arXiv preprint arXiv:2607.17423},
+  year={2026}
 }
 ```
